@@ -7,7 +7,7 @@ ProductiveHub official JavaScript (and TypeScript ) styleguide.
 1. [Naming Conventions](#references)
 1. [Comments](#comments)
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Naming Conventions
 
@@ -131,3 +131,4 @@ function calc(num) {
   return num + 1;
 }
 ```
+**[⬆ back to top](#table-of-contents)**
