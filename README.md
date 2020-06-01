@@ -5,6 +5,7 @@ ProductiveHub official JavaScript (and TypeScript ) styleguide.
 ## Table of Contents
 
 1. [Naming Conventions](#references)
+1. [Comments](#comments)
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -43,15 +44,90 @@ class user {}
 class myClass {}
 
 // good
-class User {} 
-class MyClass {} 
+class User {}
+class MyClass {}
 ```
 
-Do not prefix interfaces in typescript 
+Do not prefix interfaces in typescript
+
 ```typescript
-// bad 
-interface IMyInterface {};
+// bad
+interface IMyInterface {}
 
 // good
-interface MyInterface {};
+interface MyInterface {}
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Comments
+
+Use `/** ... */` for a comments block (multiline).
+
+```javascript
+// bad
+// calc() will return a number
+// based on input
+//
+// @param {number} num
+function calc(num) {
+  return num + 1;
+}
+
+// good
+/**
+ * calc() will return a number
+ * based on input
+ *
+ * @param {number} num
+ */
+function calc(num) {
+  return num + 1;
+}
+```
+
+Use `//` for a single line comment. Place single line comments on a newline **above** the subject of the comment.
+
+```javascript
+// bad
+const param = 1; // assign 1 to param
+
+//good
+
+// assign 1 to param
+const param = 1;
+```
+
+Allow empty line above single line comment (`//`), and start comments with a space. eslint: [spaced-comment](https://eslint.org/docs/rules/spaced-comment)
+
+```javascript
+// bad
+//assign 1 to param
+const param = 1;
+
+// good
+// assign 1 to param
+const param = 1;
+
+// bad
+/**
+ *calc() will return a number
+ *based on input
+ *
+ *@param {number} num
+ */
+function calc(num) {
+  return num + 1;
+}
+
+// good
+/**
+ * calc() will return a number
+ * based on input
+ *
+ * @param {number} num
+ */
+function calc(num) {
+  return num + 1;
+}
 ```
